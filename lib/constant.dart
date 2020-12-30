@@ -1,0 +1,150 @@
+import 'package:flutter/material.dart';
+
+const apiKey = "";
+const userUnsplash = "erondu";
+const colorBackground = Color(0xFF313B4E);
+
+List<String> urlBackground = [
+  "https://images.unsplash.com/photo-1606462531411-bd77abcb7c57?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1607273176816-acd0d46b2226?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1608822101969-3e362a03fd5e?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1606614751257-4450f1270130?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1608543826673-8c082d9d424a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1608156137306-b4e29b441e6f?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1607721591859-3f75ddaa5b33?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1607979327569-89396168bf4d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1607125571135-65d3a00aa62d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1607855634341-020840e007dc?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1606462531411-bd77abcb7c57?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1607273176816-acd0d46b2226?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1608822101969-3e362a03fd5e?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1606614751257-4450f1270130?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1608543826673-8c082d9d424a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1608156137306-b4e29b441e6f?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1607721591859-3f75ddaa5b33?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1607979327569-89396168bf4d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1607125571135-65d3a00aa62d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1607855634341-020840e007dc?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400"
+  "https://images.unsplash.com/photo-1606462531411-bd77abcb7c57?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1607273176816-acd0d46b2226?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1608822101969-3e362a03fd5e?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1606614751257-4450f1270130?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1608543826673-8c082d9d424a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1608156137306-b4e29b441e6f?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1607721591859-3f75ddaa5b33?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1607979327569-89396168bf4d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1607125571135-65d3a00aa62d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400",
+  "https://images.unsplash.com/photo-1607855634341-020840e007dc?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixlib=rb-1.2.1&q=80&w=400"
+];
+
+List<Color> colorGradientPrimary = [
+  Color(0xFFFFC371),
+  Color(0xFFFF5F6D)
+];
+
+List<Color> colorGradientSecondary = [
+  Color(0xFFfd746c),
+  Color(0xFFff9068)
+];
+
+const opacityColor = 0.7;
+List<List<Color>> backColor = [
+  [
+    Color(0xFFC6FFDD).withOpacity(opacityColor),
+    Color(0xFFFBD786).withOpacity(opacityColor),
+    Color(0xFFf7797d).withOpacity(opacityColor),
+  ],
+  [
+    Color(0xFF12c2e9).withOpacity(opacityColor),
+    Color(0xFFc471ed).withOpacity(opacityColor),
+    Color(0xFFf7797d).withOpacity(opacityColor),
+  ],
+  [
+    Color(0xFFb92b27).withOpacity(opacityColor),
+    Color(0xFF1565C0).withOpacity(opacityColor),
+  ],
+  [
+    Color(0xFFc31432).withOpacity(opacityColor),
+    Color(0xFF240b36).withOpacity(opacityColor),
+  ],
+  [
+    Color(0xFFdd3e54).withOpacity(opacityColor),
+    Color(0xFF6be585).withOpacity(opacityColor),
+  ],
+  [
+    Color(0xFF009FFF).withOpacity(opacityColor),
+    Color(0xFFec2F4B).withOpacity(opacityColor),
+  ],
+  [
+    Color(0xFFFF416C).withOpacity(opacityColor),
+    Color(0xFFFF4B2B).withOpacity(opacityColor),
+  ],
+  [
+    Color(0xFF8A2387).withOpacity(opacityColor),
+    Color(0xFFE94057).withOpacity(opacityColor),
+    Color(0xFFF27121).withOpacity(opacityColor),
+  ],
+  [
+    Color(0xFFED213A).withOpacity(opacityColor),
+    Color(0xFF93291E).withOpacity(opacityColor),
+  ],
+  [
+    Color(0xFF59C173).withOpacity(opacityColor),
+    Color(0xFFa17fe0).withOpacity(opacityColor),
+    Color(0xFF5D26C1).withOpacity(opacityColor),
+  ],
+  [
+    Color(0xFFDA4453).withOpacity(opacityColor),
+    Color(0xFF89216B).withOpacity(opacityColor),
+  ],
+  [
+    Color(0xFF333333).withOpacity(opacityColor),
+    Color(0xFFdd1818).withOpacity(opacityColor),
+  ],
+  [
+    Color(0xFF355C7D).withOpacity(opacityColor),
+    Color(0xFF6C5B7B).withOpacity(opacityColor),
+    Color(0xFFC06C84).withOpacity(opacityColor),
+  ],
+  [
+    Color(0xFF108dc7).withOpacity(opacityColor),
+    Color(0xFFef8e38).withOpacity(opacityColor),
+  ],
+  [
+    Color(0xFFc94b4b).withOpacity(opacityColor),
+    Color(0xFF4b134f).withOpacity(opacityColor),
+  ],
+  [
+    Color(0xFF23074d).withOpacity(opacityColor),
+    Color(0xFFcc5333).withOpacity(opacityColor),
+  ],
+  [
+    Color(0xFF0f0c29).withOpacity(opacityColor),
+    Color(0xFF302b63).withOpacity(opacityColor),
+    Color(0xFF24243e).withOpacity(opacityColor),
+  ],
+  [
+    Color(0xFFfc4a1a).withOpacity(opacityColor),
+    Color(0xFFf7b733).withOpacity(opacityColor),
+  ],
+  [
+    Color(0xFF03001e).withOpacity(opacityColor),
+    Color(0xFF7303c0).withOpacity(opacityColor),
+    Color(0xFFec38bc).withOpacity(opacityColor),
+    Color(0xFFfdeff9).withOpacity(opacityColor),
+  ],
+  [
+    Color(0xFFe1eec3).withOpacity(opacityColor),
+    Color(0xFFf05053).withOpacity(opacityColor),
+  ],
+  [
+    Color(0xFF1a2a6c).withOpacity(opacityColor),
+    Color(0xFFb21f1f).withOpacity(opacityColor),
+    Color(0xFFfdbb2d).withOpacity(opacityColor),
+  ],
+  [
+    Color(0xFF3A1C71).withOpacity(opacityColor),
+    Color(0xFFD76D77).withOpacity(opacityColor),
+    Color(0xFFFFAF7B).withOpacity(opacityColor),
+  ]
+];
