@@ -1,16 +1,47 @@
-# Qtz
+# Qtz - Flutter App
 
-A new Flutter project.
+Quote App
 
-## Getting Started
+**Packages we are using:**
 
-This project is a starting point for a Flutter application.
+- [Flutter Svg](https://pub.dev/packages/flutter_svg)
+- [Flutter Bloc](https://pub.dev/packages/flutter_bloc)
+- [Google Fonts](https://pub.dev/packages/google_fonts)
+- [Flutter Swiper](https://pub.dev/packages/flutter_swiper)
+- [Auto Size Text](https://pub.dev/packages/auto_size_text)
+- [Cached Network Image](https://pub.dev/packages/cached_network_image)
+- [Dio](https://pub.dev/packages/dio)
+- [Bloc](https://pub.dev/packages/bloc)
+- [Intl](https://pub.dev/packages/intl)
+- [Image Pickers](https://pub.dev/packages/image_pickers)
+- [Loader Overlay](https://pub.dev/packages/loader_overlay)
+- [Share](https://pub.dev/packages/share)
+- [Equatable](https://pub.dev/packages/Equatable)
+- [Permission Handler](https://pub.dev/packages/permission_handler)
+- [Clipboard](https://pub.dev/packages/clipboard)
+- [Loading Indicator](https://pub.dev/packages/loading_indicator)
+- [Toast](https://pub.dev/packages/toast)
+    
+**Fonts**
 
-A few resources to get you started if this is your first Flutter project:
+-  [Courgette](https://fonts.google.com/specimen/Courgette)
+-  [Rubik](https://fonts.google.com/specimen/Rubik)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**Contact**
+
+For more information contact angganurprasetya4@gmail.com
+
+**Download Apk**
+
+[Qtz.apk](https://github.com/prasetyanurangga/qtz/raw/main/Qtz.apk)
+
+**Data**
+
+[FavQs](https://favqs.com/api)
+
+### Hava App Final UI
+![App UI](https://github.com/prasetyanurangga/qtz/raw/main/qtz_app_ui.png)
+
+![Demo](https://github.com/prasetyanurangga/qtz/raw/main/qtz_app.gif)
+
